@@ -1,4 +1,6 @@
-﻿namespace CapitalsAssessment.Core.Dtos
+﻿using CapitalsAssessment.Core.Entities;
+
+namespace CapitalsAssessment.Core.Dtos
 {
     public class EmployeeApplicationDto
     {

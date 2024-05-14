@@ -2,7 +2,7 @@
 
 namespace CapitalsAssessment.Core.Entities
 {
-    public class EmployeeApplication : BaseEntity
+    public class RecruitementApplication : BaseEntity
     {
         [JsonProperty("programId")]
         public string ProgramId { get; set; }
