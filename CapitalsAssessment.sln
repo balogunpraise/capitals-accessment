@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalsAssessment.Api", "CapitalsAssessment.Api\CapitalsAssessment.Api.csproj", "{6289E815-0F08-4E16-828F-FCDDA7C88C34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapitalsAssessment.Api", "CapitalsAssessment.Api\CapitalsAssessment.Api.csproj", "{6289E815-0F08-4E16-828F-FCDDA7C88C34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalsAssessment.Core", "CapitalsAssessment.Core\CapitalsAssessment.Core.csproj", "{467A82EC-2123-4642-8CB1-AA9B8FDE1DA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapitalsAssessment.Core", "CapitalsAssessment.Core\CapitalsAssessment.Core.csproj", "{467A82EC-2123-4642-8CB1-AA9B8FDE1DA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalsAssessment.Infrastructure", "CapitalsAssessment.Infrastructure\CapitalsAssessment.Infrastructure.csproj", "{C6BD4F17-5382-4BA2-BBEB-1B167C7807BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapitalsAssessment.Infrastructure", "CapitalsAssessment.Infrastructure\CapitalsAssessment.Infrastructure.csproj", "{C6BD4F17-5382-4BA2-BBEB-1B167C7807BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalsAssessment.UnitTest", "CapitalsAssessment.UnitTest\CapitalsAssessment.UnitTest.csproj", "{F04BD473-C5AC-43E0-91BA-30C0F3F77458}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C6BD4F17-5382-4BA2-BBEB-1B167C7807BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6BD4F17-5382-4BA2-BBEB-1B167C7807BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6BD4F17-5382-4BA2-BBEB-1B167C7807BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04BD473-C5AC-43E0-91BA-30C0F3F77458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04BD473-C5AC-43E0-91BA-30C0F3F77458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04BD473-C5AC-43E0-91BA-30C0F3F77458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04BD473-C5AC-43E0-91BA-30C0F3F77458}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
