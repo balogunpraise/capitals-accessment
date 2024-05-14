@@ -5,9 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CapitalsAssessment.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ApplicationController(IEmployeeApplicationRepository employeeApplicationRepository) : ControllerBase
+    public class ApplicationController(IEmployeeApplicationRepository employeeApplicationRepository) : BaseApiController
     {
         private readonly IEmployeeApplicationRepository _employeeApplicationRepository = employeeApplicationRepository;
 
