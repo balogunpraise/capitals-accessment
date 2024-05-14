@@ -1,4 +1,6 @@
-﻿namespace CapitalsAssessment.Core.Dtos
+﻿using CapitalsAssessment.Core.Enums;
+
+namespace CapitalsAssessment.Core.Dtos
 {
     public class CustomQuestionDto
     {
@@ -8,7 +10,7 @@
 
         public string QuesttionDescription { get; set; }
 
-        public string FieldType { get; set; }
+        public FieldEnums FieldType { get; set; }
 
         public string Answer { get; set; }
 

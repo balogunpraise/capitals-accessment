@@ -15,7 +15,7 @@ namespace CapitalsAssessment.Infrastructure.Repositories
         {
             _cosmosClient = cosmosClient;
             _configuration = configuration;
-            var databaseName = _configuration["CosmosDb:DatabaseName"];
+            var databaseName = _configuration["CosmosDbSettings:DatabaseName"];
             var applicationProgram = "EmployeeProgram";
             _container = _cosmosClient.GetContainer(databaseName, applicationProgram);
         }
@@ -33,7 +33,7 @@ namespace CapitalsAssessment.Infrastructure.Repositories
                     {
                         existingItem.ProgramTitle = programDto.ProgramTitle;
                         existingItem.ProgramDescription = programDto.ProgramDescription;
-                        existingItem.Questions = programDto.Questions?.Select(x => new CustomQuestion
+                        existingItem.Questions = programDto?.Questions?.Select(x => new CustomQuestion
                         {
                             QuestionDescription = x.QuesttionDescription,
                             FieldType = x.FieldType,
@@ -60,7 +60,7 @@ namespace CapitalsAssessment.Infrastructure.Repositories
                     {
                         ProgramTitle = programDto.ProgramTitle,
                         ProgramDescription = programDto.ProgramDescription,
-                        Questions = programDto.Questions?.Select(x => new CustomQuestion
+                        Questions = programDto?.Questions?.Select(x => new CustomQuestion
                         {
                             QuestionDescription = x.QuesttionDescription,
                             FieldType = x.FieldType,
@@ -99,7 +99,7 @@ namespace CapitalsAssessment.Infrastructure.Repositories
                 Id = resource.Id,
                 ProgramTitle = resource.ProgramTitle,
                 ProgramDescription = resource.ProgramDescription,
-                Questions = resource.Questions.Select(x => new CustomQuestionDto
+                Questions = resource?.Questions?.Select(x => new CustomQuestionDto
                 {
                     Id = x.Id,
                     ProgramId = x.ProgramId,
@@ -109,7 +109,7 @@ namespace CapitalsAssessment.Infrastructure.Repositories
                     IsInternal = x.IsInternal,
                     IsDropDown= x.IsDropDown,
                     IsHidden = x.IsHidden,
-                    DropdownOptions = x.DropdownOptions.Select(y => new OptionsDto
+                    DropdownOptions = x.DropdownOptions?.Select(y => new OptionsDto
                     {
                         QuestionId = y.QuestionId,
                         OptionName = y.OptionName

@@ -18,7 +18,7 @@ namespace CapitalsAssessment.Infrastructure.Repositories
         {
             _cosmosClient = cosmosClient;
             _configuration = configuration;
-            var databaseName = _configuration["CosmosDb:DatabaseName"];
+            var databaseName = _configuration["CosmosDbSettings:DatabaseName"];
             var employeeEpplication = "EmployeeApplication";
             _applicationContainer = _cosmosClient.GetContainer(databaseName, employeeEpplication);
             var applicationProgram = "EmployeeProgram";

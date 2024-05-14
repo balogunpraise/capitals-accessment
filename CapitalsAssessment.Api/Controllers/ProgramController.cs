@@ -10,7 +10,7 @@ namespace CapitalsAssessment.Api.Controllers
     {
         private readonly IRecruitementProgramRepository _employeeProgramRepository = employeeProgramRepository;
 
-        [HttpPost]
+        [HttpPost("CreateOrUpdateProgram")]
         public async Task<ActionResult<BaseResponse<RecruitementProgram>>> CreateProgramOrUpdate(CreateProgramDto input)
         {
             var result = await _employeeProgramRepository.CreateNewOrUpdateProgram(input);
@@ -25,7 +25,7 @@ namespace CapitalsAssessment.Api.Controllers
                  return Ok();
              }*/
 
-        [HttpGet]
+        [HttpGet("GetApplicationQuestions/{programId}")]
         public async Task<ActionResult<BaseResponse<CreateProgramDto>>> GetProgramAndQuestions(string programId)
         {
             var result = await _employeeProgramRepository.GetProgram(programId);

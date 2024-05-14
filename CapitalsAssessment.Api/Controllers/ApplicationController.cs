@@ -10,7 +10,7 @@ namespace CapitalsAssessment.Api.Controllers
         private readonly IEmployeeApplicationRepository _employeeApplicationRepository = employeeApplicationRepository;
 
 
-        [HttpPost]
+        [HttpPost("SubmitApplication")]
         public async Task<ActionResult<BaseResponse<EmployeeApplicationDto>>> Apply(EmployeeApplicationDto input)
         {
             var result = await _employeeApplicationRepository.ApplyAsync(input.ProgramId, input);
@@ -19,7 +19,7 @@ namespace CapitalsAssessment.Api.Controllers
             return BadRequest();
         }
 
-        [HttpPut]
+        [HttpPut("UpdateApplication")]
         public async Task<ActionResult<BaseResponse<EmployeeApplicationDto>>> UpdateApplication(EmployeeApplicationDto input)
         {
             var result = await _employeeApplicationRepository.UpdateApplication(input);
@@ -29,7 +29,7 @@ namespace CapitalsAssessment.Api.Controllers
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("GetApplication/{id}")]
         public ActionResult GetEmployeeApplicationById(string id)
         {
             return Ok();

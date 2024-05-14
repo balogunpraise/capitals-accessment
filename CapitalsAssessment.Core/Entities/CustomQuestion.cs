@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CapitalsAssessment.Core.Enums;
+using Newtonsoft.Json;
 
 namespace CapitalsAssessment.Core.Entities
 {
@@ -12,7 +13,7 @@ namespace CapitalsAssessment.Core.Entities
         public string QuestionDescription { get; set; }
 
         [JsonProperty("fieldType")]
-        public string FieldType { get; set; }
+        public FieldEnums FieldType { get; set; }
 
         [JsonProperty("answer")]
         public string Answer { get; set; }
