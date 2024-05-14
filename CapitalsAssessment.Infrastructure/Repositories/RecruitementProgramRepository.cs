@@ -23,6 +23,8 @@ namespace CapitalsAssessment.Infrastructure.Repositories
         {
             try
             {
+                if (programDto.Questions == null || programDto.Questions.Count == 0)
+                    throw new ArgumentException("Program must contain at least one question");
                 var employeeProgram = new RecruitementProgram();
                 if (!string.IsNullOrEmpty(programDto.Id))
                 {

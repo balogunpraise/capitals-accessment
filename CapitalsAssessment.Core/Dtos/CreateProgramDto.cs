@@ -1,13 +1,15 @@
-﻿namespace CapitalsAssessment.Core.Dtos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CapitalsAssessment.Core.Dtos
 {
     public class CreateProgramDto
     {
         public string Id { get; set; }
 
-        //[Required]
+        [Required]
         public string ProgramTitle { get; set; }
 
-        //[Required]
+        [Required]
         public string ProgramDescription { get; set; }
 
         public List<CustomQuestionDto> Questions { get; set; }

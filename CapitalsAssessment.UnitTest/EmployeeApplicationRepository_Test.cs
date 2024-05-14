@@ -19,22 +19,19 @@ namespace CapitalsAssessment.UnitTest
             var input = new EmployeeApplicationDto
             {
                 ProgramId = null,
-                EmployeeAnswers = new List<EmployeeAnswer>
-                {
+                EmployeeAnswers =
+                [
                     new()
                     {
                         QuestionDescription = "First Name",
                         Answer = "Test Name"
                     }
-                }
+                ]
             };
             var handler = new EmployeeApplicationRepository(_client, _config);
   
             // Act & Assert
             Assert.ThrowsAsync<ArgumentException>(async () => await handler.ApplyAsync(input.ProgramId, input));
         }
-
-        
-       
     }
 }
