@@ -28,6 +28,8 @@ namespace CapitalsAssessment.Infrastructure.Repositories
         public async Task<EmployeeApplicationDto> ApplyAsync(string programId, EmployeeApplicationDto employeeApplicationDto)
         {
             var response = new EmployeeApplicationDto();
+            if (string.IsNullOrEmpty(programId))
+                throw new Exception("There must be a program Id");
             var result = await _container.ReadItemAsync<RecruitementProgram>(programId, new PartitionKey())
                 ?? throw new Exception("No such program");
             var employeeProgram = result.Resource;
